@@ -1,12 +1,12 @@
 public class Contact {
 
-    Integer contactsOrder;
+    Integer contactID;
     String phoneNumber;
     String firstName;
     String lastName;
 
-    public Contact(Integer contactsOrder, String phoneNumber, String firstName, String lastName) {
-        this.contactsOrder = contactsOrder;
+    public Contact(Integer contactID, String phoneNumber, String firstName, String lastName) {
+        this.contactID = contactID;
         this.phoneNumber = phoneNumber;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -14,12 +14,7 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "Contact{" +
-                "contactsOrder=" + contactsOrder +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
+        return "Contact{" + "contactID=" + contactID + ", phoneNumber='" + phoneNumber + '\'' + ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + '}';
     }
 
     public String getFirstName() { return firstName; }
@@ -28,8 +23,8 @@ public class Contact {
         return phoneNumber;
     }
 
-    public Integer getContactsOrder() {
-        return contactsOrder;
+    public Integer getContactID() {
+        return contactID;
     }
 
     public String getLastName() {

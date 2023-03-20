@@ -6,8 +6,8 @@ public class Main {
 
         Map<String, Integer> calls = new HashMap<>();
 
-        Phone phone = new SamsungGalaxy6(10, "blue", "steel", "1234gggr");
-        Phone phone1 = new SamsungGalaxy6(15, "red", "steel", "12567hgf");
+        Phone phone = new SamsungGalaxy6(10, "ANDROID", "blue", "steel", "1234gggr");
+        Phone phone1 = new SamsungGalaxy6(15, "ANDROID", "red", "steel", "12567hgf");
 
         phone.addContact(1, "phone number", "first name", "last name");
         phone.addContact(2, "second phone number", "second first name", "second last name");
@@ -16,12 +16,12 @@ public class Main {
         phone1.addContact(2, "second phone number1", "second first name1", "second last name1");
 
         System.out.println("See existing contacts in the first phone: ");
-        phone.seeExistingContacts();
+        phone.getExistingContacts();
         System.out.println("\n");
 
         System.out.println("See existing contacts in the second phone: ");
 
-        phone1.seeExistingContacts();
+        phone1.getExistingContacts();
         System.out.println('\n');
 
         ((SamsungGalaxy6) phone).getFirstContact();
@@ -41,14 +41,14 @@ public class Main {
         phone.call("second phone number");
         phone.call("second phone number");
 
-        phone.viewCallHistory();
-        phone1.viewCallHistory();
+        phone.getCallHistory();
+        phone1.getCallHistory();
 
         System.out.println("Phone's messages: ");
-        phone.seeAllMessages();
+        phone.getAllMessages();
         //System.out.println("\n");
         System.out.println("Phone1's messages: ");
-        phone1.seeAllMessages();
+        phone1.getAllMessages();
 
 
     }
